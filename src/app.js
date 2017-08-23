@@ -1,1 +1,1 @@
-import SimpleInput from "./simple-input";
+import FunContainer from './fun-container';
