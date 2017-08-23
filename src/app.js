@@ -1,1 +1,1 @@
-console.log(' hello ');
+import SimpleInput from "./simple-input";
