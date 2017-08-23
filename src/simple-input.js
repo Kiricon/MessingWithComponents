@@ -3,8 +3,20 @@ export default class SimpleInput extends HTMLElement {
         super(); 
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
-            <span>Hello World</span>
+            Hello World: <span>0</span> 
         `;
+        this.count = 0;
+        this.increment();
+    }
+
+    increment() {
+        this.count++;
+        let self = this;
+        setTimeout( () => {
+            self.shadowRoot.querySelector('span').innerText = this.count;
+            self.increment();
+        }, 1000);
+        
     }
 }
 
